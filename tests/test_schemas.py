@@ -79,3 +79,9 @@ def test_blank_optional_text_is_rejected() -> None:
     with pytest.raises(ValidationError, match="non-blank"):
         valid_request(product="")
 
+
+def test_production_validation_rejects_unexpected_fields() -> None:
+    data = valid_request().model_dump() | {"unexpected_field": "not allowed"}
+
+    with pytest.raises(ValidationError, match="unexpected_field"):
+        CustomerRequest.model_validate(data, extra="forbid")
