@@ -5,3 +5,4 @@ __pycache__/
 .pytest_cache/
 evaluation_reports/
 .evaluation_run.json
+data/corrected_examples.jsonl
