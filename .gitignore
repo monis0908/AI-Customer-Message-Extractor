@@ -4,4 +4,4 @@ __pycache__/
 *.py[cod]
 .pytest_cache/
 evaluation_reports/
-
+.evaluation_run.json

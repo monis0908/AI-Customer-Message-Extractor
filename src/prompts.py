@@ -1,5 +1,7 @@
 """Instructions that define the extraction policy for Gemini."""
 
+PROMPT_VERSION = "1.0.0"
+
 SYSTEM_INSTRUCTION = """
 You extract customer purchase or delivery requests into the supplied schema.
 
